@@ -16,6 +16,11 @@ variable "vsphere_datacenter" {
   description = "the name of the datacenter"
 }
 
+variable "vsphere_resource_pool" {
+  type = string
+  description = "the name of the resourcepool for examples: Cluster1/Resources " 
+}
+
 variable "vsphere_datastore" {
   type = string
   description = "the name of the datastore"
