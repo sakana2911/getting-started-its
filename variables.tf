@@ -16,11 +16,6 @@ variable "vsphere_datacenter" {
   description = "the name of the datacenter"
 }
 
-variable "vsphere_resource_pool" {
-  type = string
-  description = "the name of the resourcepool for examples: Cluster1/Resources " 
-}
-
 variable "vsphere_datastore" {
   type = string
   description = "the name of the datastore"
@@ -34,6 +29,11 @@ variable "vsphere_vm_template" {
 variable "vsphere_vm_name" {
   type = string
   description = "the name of the vm"
+}
+
+variable "vsphere_resource_pool" {
+  type = string
+  description = "the name of the resourcepool for examples: Cluster1/Resources " 
 }
 
 variable "vsphere_vm_portgroup" {
