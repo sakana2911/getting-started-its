@@ -39,7 +39,6 @@ data "vsphere_virtual_machine" "template" {
 
 resource "vsphere_virtual_machine" "vm" {
   name             = var.vsphere_vm_name
-  resource_pool_id = data.vsphere_resource_pool.pool.id
   datastore_id     = data.vsphere_datastore.datastore.id
 
   num_cpus = var.vsphere_vm_cpu #2
@@ -74,7 +73,6 @@ module "vm" {
   vmtemp        = var.vsphere_vm_template
   instances     = 1
   vmname        = var.vsphere_vm_name
-  vmrp          = var.vsphere_resource_pool
   network = {
     "${var.vsphere_vm_portgroup}"  = ["", ""] # To use DHCP create Empty list ["",""]
   }
