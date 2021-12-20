@@ -55,8 +55,8 @@ resource "vsphere_virtual_machine" "vm" {
     network_id = data.vsphere_network.network.id
   }
   
-  wait_for_guest_ip_timeout = 0
-  wait_for_guest_net_timeout = 0
+  wait_for_guest_ip_timeout = -1
+  wait_for_guest_net_timeout = -1
 
   disk {
     label = "disk0"
